@@ -7,7 +7,7 @@ class App < Sinatra::Base
   end
 
   post '/team' do
-    params.each |key, value| do
+    params.each do |key, value| 
       instance_variable_set(key, value)
     end
     erb :team
